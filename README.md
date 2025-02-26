@@ -51,7 +51,7 @@ Graph Algorithms (Dijkstra's, Bellman-Ford)
 
 Trie Data Structure
 
-Week 4: Mock Interviews & System Design
+### Week 4: Mock Interviews & System Design
 
 Full-length mock interviews
 
