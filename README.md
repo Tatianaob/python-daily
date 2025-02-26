@@ -1,24 +1,19 @@
-Python Technical Interview Preparation
+# Python Technical Interview Preparation
 
-Overview
+### Overview
 
 This repository is dedicated to preparing for Python-based technical interviews. It includes a structured 30-day study plan, daily coding problems, and solutions to help reinforce fundamental concepts and problem-solving skills.
 
-Study Plan
+### Study Plan
 
-Week 1: Python Basics & Data Structures
+### Week 1: Python Basics & Data Structures
 
 Day 1: Arrays & Lists
-
-Reverse an Array
-
-Find Maximum in an Array
-
-Two Sum (Leetcode #1)
-
-Move Zeros to the End
-
-(Bonus) First Missing Positive Integer
+- Reverse an Array
+- Find Maximum in an Array
+- Two Sum (Leetcode #1)
+- Move Zeros to the End
+- (Bonus) First Missing Positive Integer
 
 Day 2: HashMaps & Sets
 
@@ -32,7 +27,7 @@ Day 6: Stacks & Queues
 
 Day 7: Weekly Review & Mock Test
 
-Week 2: Sorting & Searching
+### Week 2: Sorting & Searching
 
 Bubble Sort, Selection Sort, Insertion Sort
 
@@ -46,7 +41,7 @@ Graph Traversal
 
 Dynamic Programming Basics
 
-Week 3: Advanced Topics
+### Week 3: Advanced Topics
 
 Dynamic Programming
 
