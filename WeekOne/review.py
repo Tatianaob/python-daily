@@ -46,3 +46,26 @@ def exercise_2():
 
 exercise_2()
 
+# Data manipulation:
+
+def exercise_3():
+   movies = ["Mike 17", "Black Bag", "Monkey"]
+   movies.append("Gladiator")
+   
+   favorite_food = ("Plantains", "Carbonara", "Lentejas")
+   programming_languages = {"Python", "JS", "Java"}
+
+   capitals = {
+      "France": "Paris",
+      "United Kingdom": "London",
+      "Colombia": "Bogota"
+   }
+
+   print(f"favorite movies: {movies} ")
+   print(f"favorite food: {favorite_food}")
+   print(f"Languages: {programming_languages}")
+   print(f"Capitals visited: {capitals}")
+
+exercise_3()
+
+# OOP
