@@ -69,3 +69,22 @@ def exercise_3():
 exercise_3()
 
 # OOP
+
+class Book:
+   def __init__(self, titulo, autor, paginas):
+      self.titulo = titulo
+      self.autor = autor
+      self.paginas = paginas
+      self.leido = False
+      
+      
+   def mark_as_read(self):
+      self.leido = True
+
+   def get_info(self):
+      status = "Leido" if self.leido else "No Leido"
+      return f"'{self.titulo}' by {self.autor}' ({self.paginas} paginas) - {status}"
+
+
+book1 = Book('Python Crash Course', 'Eric Matthes', '544')
+print(book1.get_info())
