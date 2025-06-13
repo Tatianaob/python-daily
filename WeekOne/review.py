@@ -117,3 +117,49 @@ book1.mark_as_read()
 book3.mark_as_read()
 library.list_books()
 print(f"\nBooks read: {library.books_read()}/{len(library.books)}")
+
+
+# Guess the number: Game
+
+import random
+class NumberGuessingGame:
+    def __init__(self, min_num=1, max_num=100):
+        self.min_num = min_num
+        self.max_num = max_num
+        self.secret_number = random.randint(min_num, max_num)
+        self.attempts = 0
+        self.max_attempts = 7
+    
+    def make_guess(self, guess):
+        self.attempts += 1
+        
+        if guess == self.secret_number:
+            print(f"🎉 Congratulations! You guessed {self.secret_number} in {self.attempts} attempts!")
+            return True
+        elif guess < self.secret_number:
+            print("📈 Too low!")
+        else:
+            print("📉 Too high!")
+        
+        remaining = self.max_attempts - self.attempts
+        if remaining > 0:
+            print(f"Attempts remaining: {remaining}")
+        else:
+            print(f"💀 Game over! The number was {self.secret_number}")
+            return True
+        
+        return False
+    
+    def play(self):
+        print(input(f"Guess the number between {self.min_num} and {self.max_num}! "))
+        print(f"You have {self.max_attempts} attempts.")
+        
+        # sample_guesses = [50, 75, 62, 68, 71, 69, 70]
+        # for guess in sample_guesses:
+        #     if self.attempts < self.max_attempts:
+        #         print(f"\nGuess: {guess}")
+        #         if self.make_guess(guess):
+        #             break
+
+game = NumberGuessingGame()
+game.play()
