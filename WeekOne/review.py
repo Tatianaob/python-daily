@@ -71,20 +71,49 @@ exercise_3()
 # OOP
 
 class Book:
-   def __init__(self, titulo, autor, paginas):
-      self.titulo = titulo
-      self.autor = autor
-      self.paginas = paginas
-      self.leido = False
-      
-      
+   def __init__(self, title, author, pages):
+      self.title = title
+      self.author = author
+      self.pages = pages
+      self.is_read = False
+            
    def mark_as_read(self):
-      self.leido = True
+      self.is_read = True
 
    def get_info(self):
-      status = "Leido" if self.leido else "No Leido"
-      return f"'{self.titulo}' by {self.autor}' ({self.paginas} paginas) - {status}"
+      status = "Read" if self.is_read else "Not read"
+      return f"'{self.title}' by {self.author}' ({self.pages} pages) - {status}"
 
 
+class Library:
+    def __init__(self):
+            self.books = []
+        
+    def add_book(self, book):
+        self.books.append(book)
+        print(f"Added '{book.title}' to library")
+        
+    def list_books(self):
+        print("Library Books:")
+        for i, book in enumerate(self.books, 1):
+            print(f"  {i}. {book.get_info()}")
+        
+    def books_read(self):
+        read_books = [book for book in self.books if book.is_read]
+        return len(read_books)
+
+
+library = Library()
 book1 = Book('Python Crash Course', 'Eric Matthes', '544')
-print(book1.get_info())
+book2 = Book("Clean Code", "Robert Martin", 464)
+book3 = Book("The Pragmatic Programmer", "David Thomas", 352)
+
+# print(book1.get_info())
+library.add_book(book1)
+library.add_book(book2)
+library.add_book(book3)
+
+book1.mark_as_read()
+book3.mark_as_read()
+library.list_books()
+print(f"\nBooks read: {library.books_read()}/{len(library.books)}")
