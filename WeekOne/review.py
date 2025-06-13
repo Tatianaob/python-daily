@@ -154,12 +154,13 @@ class NumberGuessingGame:
         print(input(f"Guess the number between {self.min_num} and {self.max_num}! "))
         print(f"You have {self.max_attempts} attempts.")
         
-        # sample_guesses = [50, 75, 62, 68, 71, 69, 70]
-        # for guess in sample_guesses:
-        #     if self.attempts < self.max_attempts:
-        #         print(f"\nGuess: {guess}")
-        #         if self.make_guess(guess):
-        #             break
+        sample_guesses = [50, 75, 62, 68, 71, 69, 70]
+        for guess in sample_guesses:
+            if self.attempts < self.max_attempts:
+                print(f"\nGuess: {guess}")
+                if self.make_guess(guess):
+                    break
 
+    # Demo the game
 game = NumberGuessingGame()
 game.play()
