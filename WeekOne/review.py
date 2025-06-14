@@ -164,3 +164,46 @@ class NumberGuessingGame:
     # Demo the game
 game = NumberGuessingGame()
 game.play()
+
+
+#  Text Analysis Tool
+
+class TextAnalyzer:
+    def __init__(self, text):
+        self.text = text.lower()
+        self.words = self.text.split()
+    
+    def word_count(self):
+        return len(self.words)
+    
+    def character_count(self, include_spaces=True):
+        if include_spaces:
+            return len(self.text)
+        else:
+            return len(self.text.replace(" ", ""))
+    
+    def most_common_word(self):
+        word_freq = {}
+        for word in self.words:
+            # Remove punctuation
+            clean_word = ''.join(char for char in word if char.isalnum())
+            if clean_word:
+                word_freq[clean_word] = word_freq.get(clean_word, 0) + 1
+        
+        if word_freq:
+            return max(word_freq.items(), key=lambda x: x[1])
+        return None, 0
+    
+    def analyze(self):
+        print(f"Text: '{self.text}'")
+        print(f"Words: {self.word_count()}")
+        print(f"Characters (with spaces): {self.character_count(True)}")
+        print(f"Characters (without spaces): {self.character_count(False)}")
+        word, count = self.most_common_word()
+        if word:
+            print(f"Most common word: '{word}' (appears {count} times)")
+
+# Demo the analyzer
+sample_text = "Python is great. Python is powerful. Python is fun to learn!"
+analyzer = TextAnalyzer(sample_text)
+analyzer.analyze()
