@@ -57,12 +57,21 @@ def twoSum(nums, target):
 
 print(twoSum([2,7,11,15,1,8], 9))
 
-
-
-
-
-
-
-
 # - Move Zeros to the End
+
+def moveZeros(numeros):
+    posicion = 0
+    for num in numeros:
+        if num != 0:
+            numeros[posicion] = num
+            posicion += 1
+    while posicion < len(numeros):
+        numeros[posicion] = 0
+        posicion += 1
+    return numeros
+
+print(moveZeros([0, 1, 0, 3, 12]))
+
+
+
 # - (Bonus) First Missing Positive Integer
