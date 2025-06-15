@@ -74,4 +74,7 @@ print(moveZeros([0, 1, 0, 3, 12]))
 
 
 
-# - (Bonus) First Missing Positive Integer
+# First Missing Positive Integer - LeetCode 41
+# Given an unsorted integer array nums,
+# return the smallest missing positive integer.
+# nums = [1,2,0] output = 3
