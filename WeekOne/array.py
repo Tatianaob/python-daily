@@ -78,3 +78,15 @@ print(moveZeros([0, 1, 0, 3, 12]))
 # Given an unsorted integer array nums,
 # return the smallest missing positive integer.
 # nums = [1,2,0] output = 3
+
+def firstMissingPositive(nums):
+    num_set = set(nums)
+    i = 1
+    while True:
+        if i not in num_set:
+            return i
+        i += 1
+
+print(firstMissingPositive([1, 2, 0]))        # ➞ 3
+print(firstMissingPositive([3, 4, -1, 1]))    # ➞ 2
+print(firstMissingPositive([7, 8, 9, 11, 12]))# ➞ 1
